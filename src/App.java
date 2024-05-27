@@ -2,6 +2,7 @@ import IO.*;
 import Configuration.*;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.Scanner;
 
 public class App {
@@ -18,7 +19,7 @@ public class App {
 
             case "settings":
 
-                ConfigManager configManager = new ConfigManager("C:\\Users\\akhmy\\Documents\\Projects\\IntelliJ IDEA\\Menu\\src\\Configuration\\Settings.txt");
+                ConfigManager configManager = new ConfigManager("settings.properties");
 
                 String param = Settings.show(configManager, sc);
                 while (param != null) {
