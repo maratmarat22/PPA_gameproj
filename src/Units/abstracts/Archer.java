@@ -1,6 +1,6 @@
-package Units;
+package Units.abstracts;
 
-public class Archer extends Unit implements IRange, IClonable {
+public class Archer extends Unit implements Range, Cloneable {
 
     public Archer(int cost, int health, int damage, int armor, int dodge) {
         super(cost, health, damage, armor, dodge);

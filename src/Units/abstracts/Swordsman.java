@@ -1,4 +1,4 @@
-package Units;
+package Units.abstracts;
 
 public class Swordsman extends Unit {
 
