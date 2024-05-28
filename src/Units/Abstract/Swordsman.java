@@ -1,4 +1,4 @@
-package Units;
+package Units.Abstract;
 
 public class Swordsman extends Unit {
 
