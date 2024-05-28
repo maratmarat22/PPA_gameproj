@@ -1,6 +1,5 @@
 import IO.*;
 import Configuration.*;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Scanner;
@@ -10,11 +9,11 @@ public class App {
     public static void main(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in);
-
         String option = MainMenu.show(sc);
+
         switch(option) {
             case "runtime":
-                //... здесь вызов функции runtime
+                Runtime.run();
                 break;
 
             case "settings":

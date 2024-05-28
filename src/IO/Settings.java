@@ -1,7 +1,6 @@
 package IO;
 
 import Configuration.ConfigManager;
-
 import java.util.Scanner;
 
 public class Settings {
