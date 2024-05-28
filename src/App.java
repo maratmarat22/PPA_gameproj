@@ -18,7 +18,7 @@ public class App {
 
             case "settings":
 
-                ConfigManager configManager = new ConfigManager("settings.properties");
+                ConfigManager configManager = new ConfigManager("src\\Configuration\\Settings.txt");
 
                 String param = Settings.show(configManager, sc);
                 while (param != null) {
