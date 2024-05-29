@@ -1,20 +1,21 @@
-import Factories.HumanFactory;
-import Factories.UndeadFactory;
-import Units.Abstract.Unit;
+import Army.*;
+import Factories.*;
+import Battlefield.*;
 
 public class Runtime {
 
     public static void run() {
 
-        HumanFactory humanFactory = new HumanFactory();
-        ArmyCreator humanArmyCreator = new ArmyCreator(humanFactory);
-        Army humanArmy = humanArmyCreator.createArmy(1000);
+        ArmyCreator armyCreator = new ArmyCreator();
 
-        UndeadFactory undeadFactory = new UndeadFactory();
-        ArmyCreator undeadArmyCreator = new ArmyCreator(undeadFactory);
-        Army undeadArmy = undeadArmyCreator.createArmy(1000);
+        armyCreator.setUnitFactory(new HumanFactory());
+        Army humanArmy = armyCreator.createArmy(1000);
 
-        Battlefield battlefield = new Battlefield(humanArmy, undeadArmy);
+        armyCreator.setUnitFactory(new UndeadFactory());
+        Army undeadArmy = armyCreator.createArmy(1000);
+
+        Battlefield battlefield = new Battlefield();
+        battlefield.setStrategy(new OneLineBattlefield());
 
         while (!humanArmy.units.isEmpty() || !undeadArmy.units.isEmpty()) {
 

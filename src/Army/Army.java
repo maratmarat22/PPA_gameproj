@@ -1,3 +1,5 @@
+package Army;
+
 import Units.Abstract.Unit;
 import java.util.LinkedList;
 import java.util.Objects;

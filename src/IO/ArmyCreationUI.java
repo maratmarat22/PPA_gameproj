@@ -16,8 +16,6 @@ public class ArmyCreationUI {
         System.out.println("Gold: " + budget);
         System.out.println("Units: " + units);
 
-        // Также код, отображающий уже собранную армию
-
         Scanner in = new Scanner(System.in);
         char choice = in.next().charAt(0);
 

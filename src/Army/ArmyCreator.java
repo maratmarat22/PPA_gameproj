@@ -1,15 +1,16 @@
+package Army;
+
 import Factories.UnitFactory;
 import java.util.LinkedList;
 import Units.Abstract.*;
 import IO.ArmyCreationUI;
 import java.lang.reflect.*;
 
-
 public class ArmyCreator {
 
-    private final UnitFactory unitFactory;
+    private UnitFactory unitFactory;
 
-    public ArmyCreator(UnitFactory unitFactory) {
+    public void setUnitFactory(UnitFactory unitFactory) {
         this.unitFactory = unitFactory;
     }
 
@@ -25,6 +26,8 @@ public class ArmyCreator {
                 try {
                     Method factoryMethod = unitFactory.getClass().getMethod("create" + unitType);
                     Unit unit = (Unit)factoryMethod.invoke(unitFactory);
+
+                    // Впоследствии уберите отсюда выводы в консоль
 
                     if (unit.getCost() <= budget) {
                         units.add(unit);
