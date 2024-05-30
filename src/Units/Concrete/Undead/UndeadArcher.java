@@ -4,6 +4,6 @@ import Units.Abstract.Archer;
 
 public class UndeadArcher extends Archer {
     public UndeadArcher() {
-        super(150, 1, 1, 1, 1);
+        super(150, 3, 6, 4, 10);
     }
 }

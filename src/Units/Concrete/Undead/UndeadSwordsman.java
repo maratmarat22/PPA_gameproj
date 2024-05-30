@@ -4,6 +4,6 @@ import Units.Abstract.Swordsman;
 
 public class UndeadSwordsman extends Swordsman {
     public UndeadSwordsman() {
-        super(200, 1, 1, 1, 1);
+        super(200, 8, 9, 8, 6);
     }
 }

@@ -4,6 +4,6 @@ import Units.Abstract.Wizard;
 
 public class UndeadWizard extends Wizard {
     public UndeadWizard() {
-        super(300, 1, 1, 1, 1);
+        super(300, 3, 10, 1, 6);
     }
 }

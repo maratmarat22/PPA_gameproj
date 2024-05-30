@@ -4,6 +4,6 @@ import Units.Abstract.Healer;
 
 public class HumanHealer extends Healer {
     public HumanHealer() {
-        super(250, 1, 1, 1, 1);
+        super(250, 8, 2, 2, 2);
     }
 }
