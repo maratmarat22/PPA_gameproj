@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ArmyCreationUI {
 
-    public static String show(int budget, String units) {
+    public static String display(int budget, String units) {
 
         System.out.println("ARMY CREATION UI");
         System.out.println("1. Infantryman - 100");
@@ -12,6 +12,7 @@ public class ArmyCreationUI {
         System.out.println("3. Swordsman - 200");
         System.out.println("4. Healer - 250");
         System.out.println("5. Wizard - 300");
+        System.out.println("0. Confirm & continue");
 
         System.out.println("Gold: " + budget);
         System.out.println("Units: " + units);
@@ -25,6 +26,7 @@ public class ArmyCreationUI {
             case '3' -> "Swordsman";
             case '4' -> "Healer";
             case '5' -> "Wizard";
+            case '0' -> "Confirm & continue";
             default -> null;
         };
     }

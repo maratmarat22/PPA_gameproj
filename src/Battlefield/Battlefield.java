@@ -14,7 +14,7 @@ public class Battlefield {
         battlefieldStrategy.attack(attacker, defender);
     }
 
-    public void show(Army attacker, Army defender) {
-        battlefieldStrategy.show(attacker, defender);
+    public void display(Army attacker, Army defender) {
+        battlefieldStrategy.display(attacker, defender);
     }
 }

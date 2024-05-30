@@ -6,6 +6,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * Данный класс содержит методы для работы с файлом настроек игры.
+ */
+
 public class ConfigManager {
 
     private final Properties properties;
@@ -22,15 +26,16 @@ public class ConfigManager {
 
         String currentValue = properties.getProperty(param);
 
-        //if (currentValue != null) {
+        if (currentValue != null) {
             // Инвертируем значение настройки
             String newValue = currentValue.equals("1") ? "0" : "1";
             properties.setProperty(param, newValue);
             // Сохраняем изменения в файл
             properties.store(new FileOutputStream(configFile), null);
-        //} else {
-        //    System.out.println("Setting not found: " + param);
-        //}
+        } else {
+            // Убрать вывод в консоль из метода
+            //System.out.println("Setting not found: " + param);
+        }
     }
 
     public static String returnParamValueString(ConfigManager configManager, String param) {

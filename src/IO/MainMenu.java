@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainMenu {
 
-    public static String show(Scanner sc) {
+    public static String display(Scanner sc) {
 
         System.out.println("MAIN MENU");
         System.out.println("1. Start new game");

@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in);
-        String option = MainMenu.show(sc);
+        String option = MainMenu.display(sc);
 
         switch(option) {
             case "runtime":
@@ -19,10 +19,10 @@ public class App {
 
                 ConfigManager configManager = new ConfigManager("src\\Configuration\\Settings.txt");
 
-                String param = Settings.show(configManager, sc);
+                String param = Settings.display(configManager, sc);
                 while (param != null) {
                     configManager.switchParam(param);
-                    param = Settings.show(configManager, sc);
+                    param = Settings.display(configManager, sc);
                 }
 
                 break;

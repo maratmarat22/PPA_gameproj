@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import Units.Abstract.*;
 import IO.ArmyCreationUI;
 import java.lang.reflect.*;
+import java.util.Objects;
 
 public class ArmyCreator {
 
@@ -20,7 +21,10 @@ public class ArmyCreator {
 
         while (budget > 0) {
 
-            String unitType = ArmyCreationUI.show(budget, units.toString());
+            String unitType = ArmyCreationUI.display(budget, units.toString());
+
+            if (Objects.equals(unitType, "Confirm & continue"))
+                break;
 
             if (unitType != null) {
                 try {

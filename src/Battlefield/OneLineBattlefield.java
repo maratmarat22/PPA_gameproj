@@ -1,6 +1,7 @@
 package Battlefield;
 
 import Army.Army;
+import IO.GameUI;
 
 public class OneLineBattlefield implements BattlefieldStrategy {
 
@@ -10,8 +11,8 @@ public class OneLineBattlefield implements BattlefieldStrategy {
     }
 
     @Override
-    public void show(Army attacker, Army defender) {
-
+    public void display(Army attacker, Army defender) {
+        GameUI.displayBattlefield(attacker.units.toString(), defender.units.toString());
     }
 }
 

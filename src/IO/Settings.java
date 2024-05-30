@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Settings {
 
-    public static String show(ConfigManager configManager, Scanner sc) {
+    public static String display(ConfigManager configManager, Scanner sc) {
 
         System.out.println("SETTINGS:");
         System.out.printf("1. Logging (%s)\n", ConfigManager.returnParamValueString(configManager, "Logging"));
