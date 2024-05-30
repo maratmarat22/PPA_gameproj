@@ -12,8 +12,4 @@ public class Army {
         this.units = units;
     }
 
-    public void attackEnemyArmy(Army enemies){
-      
-        Objects.requireNonNull(units.peek()).meleeAttack(enemies.units.peek());
-    }
 }
