@@ -7,7 +7,7 @@ public class Healer extends Unit implements Range {
     }
 
     @Override
-    public void rangeAbility() {
-
+    public void rangeAbility(Unit unit) {
+        unit.setHealth(unit.getHealth());
     }
 }

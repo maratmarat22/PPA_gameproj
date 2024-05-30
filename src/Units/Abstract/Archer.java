@@ -6,13 +6,17 @@ public class Archer extends Unit implements Range, ICloneable {
         super(cost, health, damage, armor, dodge);
     }
 
+    public Archer(Unit unit) {
+        super(unit);
+    }
+
     @Override
-    public void rangeAbility() {
+    public void rangeAbility(Unit unit) {
 
     }
 
     @Override
-    public void cloneUnit() {
-
+    public Archer cloneUnit() {
+        return new Archer(this);
     }
 }

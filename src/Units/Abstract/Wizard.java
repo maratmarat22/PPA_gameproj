@@ -7,7 +7,12 @@ public class Wizard extends Unit implements Range {
     }
 
     @Override
-    public void rangeAbility() {
-
+    public void rangeAbility(Unit unit) {
+        if (unit instanceof Archer) {
+            ((Archer) unit).cloneUnit();
+        }
+        if (unit instanceof Infantryman) {
+            ((Infantryman) unit).cloneUnit();
+        }
     }
 }
