@@ -2,5 +2,5 @@ package Units.Abstract;
 
 public interface Range {
 
-    void rangeAbility();
+    void rangeAbility(Unit unit);
 }

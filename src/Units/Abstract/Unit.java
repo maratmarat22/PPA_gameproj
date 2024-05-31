@@ -2,11 +2,11 @@ package Units.Abstract;
 
 public abstract class Unit {
 
-    int cost;
-    int health;
-    int damage;
-    int armor;
-    int dodge;
+    private int cost;
+    private int health;
+    private int damage;
+    private int armor;
+    private int dodge;
 
     public Unit(int cost, int health, int damage, int armor, int dodge) {
         this.cost = cost;
@@ -14,6 +14,14 @@ public abstract class Unit {
         this.damage = damage;
         this.armor = armor;
         this.dodge = dodge;
+    }
+
+    public Unit(Unit unit) {
+        this.armor = unit.armor;
+        this.dodge = unit.dodge;
+        this.cost = unit.cost;
+        this.damage = unit.damage;
+        this.health = unit.health;
     }
 
     public void meleeAttack(Unit unit) {

@@ -6,8 +6,12 @@ public class Infantryman extends Unit implements ICloneable {
         super(cost, health, damage, armor, dodge);
     }
 
-    @Override
-    public void cloneUnit() {
+    public Infantryman(Unit unit) {
+        super(unit);
+    }
 
+    @Override
+    public Infantryman cloneUnit() {
+        return new Infantryman(this);
     }
 }
