@@ -9,7 +9,7 @@ public class Army {
     public LinkedList<Unit> units;
 
     public Army(LinkedList<Unit> units) {
+
         this.units = units;
     }
-
 }

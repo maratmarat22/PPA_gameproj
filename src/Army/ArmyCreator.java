@@ -2,8 +2,10 @@ package Army;
 
 import Factories.UnitFactory;
 import java.util.LinkedList;
+
+import IO.UIManager;
 import Units.Abstract.*;
-import IO.ArmyCreationUI;
+
 import java.lang.reflect.*;
 import java.util.Objects;
 
@@ -15,13 +17,13 @@ public class ArmyCreator {
         this.unitFactory = unitFactory;
     }
 
-    public Army createArmy(int budget) {
+    public Army createArmy(int budget, UIManager UI) {
 
         LinkedList<Unit> units = new LinkedList<>();
 
         while (budget > 0) {
 
-            String unitType = ArmyCreationUI.display(budget, units.toString());
+            String unitType = UI.displayArmyCreationUI(budget, units.toString());
 
             if (Objects.equals(unitType, "Confirm & continue"))
                 break;

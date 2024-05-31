@@ -8,23 +8,25 @@ public class App {
     public static void main(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in);
-        String option = MainMenu.display(sc);
+        UIManager UI = new UIManager(sc);
+
+        ConfigManager configManager = new ConfigManager("src\\Configuration\\Settings.txt");
+
+        String option = UI.displayMainMenu();
 
         switch(option) {
+
             case "runtime":
-                Runtime.run();
+                Runtime runtime = new Runtime(UI, configManager);
+                runtime.run();
                 break;
 
             case "settings":
-
-                ConfigManager configManager = new ConfigManager("src\\Configuration\\Settings.txt");
-
-                String param = Settings.display(configManager, sc);
+                String param = UI.displaySettings(configManager);
                 while (param != null) {
                     configManager.switchParam(param);
-                    param = Settings.display(configManager, sc);
+                    param = UI.displaySettings(configManager);
                 }
-
                 break;
 
             case "exit": System.exit(0);
@@ -35,3 +37,4 @@ public class App {
         main(args);
     }
 }
+

@@ -1,6 +1,6 @@
 import Units.Abstract.Swordsman;
 
-public class ArmorUp extends SwordsManDecorator{
+public class ArmorUp extends SwordsmanDecorator{
     Swordsman swordsman;
 
     public ArmorUp(int cost, int health, int damage, int armor, int dodge, Swordsman swordsman) {
