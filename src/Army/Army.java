@@ -12,4 +12,8 @@ public class Army {
 
         this.units = units;
     }
+    public int getNumberOfUnits() {
+
+        return units.size();
+    }
 }
